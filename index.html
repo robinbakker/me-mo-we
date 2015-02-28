@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html class="startup">
+<head>
+  <title>me-mo-we</title>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"/>
+  <link rel="stylesheet" type="text/css" media="screen" title="default" href="css/default.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon-precomposed" type="image/png" href="img/icon_touch.png" />
+</head>
+<body>
+  <header>
+    <div class="background"></div>
+    <div class="content">
+      <div id="gamestats">
+        <span id="time" class="el-icon-time"></span>
+        <span id="turns" class="el-icon-resize-horizontal"></span>
+      </div>
+      <div id="rating">
+        <ol class="stars bg">
+          <li class="el-icon-star"></li>
+          <li class="el-icon-star"></li>
+          <li class="el-icon-star"></li>
+        </ol>
+        <ol class="stars front">
+          <li class="el-icon-star"></li>
+          <li class="el-icon-star"></li>
+          <li class="el-icon-star"></li>
+        </ol>
+      </div>
+      <div class="buttons">
+        <a id="aHome" href="#" class="home el-icon-home"></a><a id="aAgain" class="again el-icon-repeat" href="#"></a><a id="aNext" href="#" class="next el-icon-chevron-right"></a>
+      </div>
+    </div>
+    <a id="aCord"><span class="cord"></span></a>
+  </header>
+  <section id="splash">
+    <h1><span class="me">me</span> <span class="mo">mo</span> <span class="we">we</span></h1>
+  </section>
+  <section id="help">
+    <div id="divCards">
+      <p class="cardsource buttons"><a id="aSourceCamera" href="#" class="el-icon-camera"></a><a id="aSourceFiles" href="#" class="el-icon-folder-open"></a><a id="aSourceMagic" href="#" class="el-icon-magic"></a></p>
+      <div class="cameracontent">
+        <video autoplay></video><canvas></canvas>
+        <a id="aTakePicture" href="#" class="el-icon-camera"></a><a id="aCancelTakePicture" href="#" class="el-icon-repeat"></a>
+      </div>
+      <div class="placeholders"></div>
+      <input type="file" id="inpFiles" accept="image/*" multiple>
+      <p class="buttons hidden"><a id="aResetImages" href="#" class="reset el-icon-repeat"></a><a id="aUseImagesAndPlay" href="#" class="next el-icon-chevron-right"></a></p>
+    </div>
+  </section>
+  <section id="game">
+    <div id="cards"></div>
+  </section>
+  <script src="js/appframework.min.js"></script>
+  <script src="js/default_miscutils.js"></script>
+  <script src="js/memowe.js"></script>
+  <script>
+    memowe.init(memowe.AT_Default);
+  </script>
+</body>
+</html>
