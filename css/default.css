@@ -161,10 +161,6 @@ header .background {
   transform: rotate3d(0,0,1,-1deg) translate3d(0,0,0);
   padding-top: 7vh;
   overflow: hidden;
-  /*-moz-transition: all .1s ease;
-  -o-transition: all .1s ease;
-  -webkit-transition: all .1s ease;
-  transition: all .1s ease;*/
   z-index: 0;
 }
 header.active .background {
@@ -181,13 +177,11 @@ header .content {
   margin: 0 auto;
   display: none;
   position: relative;
-  /* overflow:hidden; */
   padding-top: 3vmin;
 }
 header .content div {
   margin: 0 auto;
   position: relative;
-  /* overflow:hidden; */
 }
 header.active .content { display: block; }
 #gamestats {
@@ -291,8 +285,6 @@ header.active .content { display: block; }
   display: inline-block;
   vertical-align: top;
   cursor: pointer;
-  /* width:10rem; */
-  /* height:10rem; */
   width: 20%;
   max-height: 40%;
   margin:2%;
@@ -304,11 +296,8 @@ header.active .content { display: block; }
   z-index: 0;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
-  /*-webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);*/
   -webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
-  /*border: .75rem solid #fff;
-  border-bottom: 2.25rem solid #fff;*/
   border: .5vmin solid #fff;
   position: relative;
   border-radius:2px;
@@ -377,7 +366,6 @@ header.active .content { display: block; }
   font-style: normal;   
   font-size: 10vmin;
   line-height: 10vmin;
-  /* line-height: 1; */
   speak: none;
   display: inline-block;
   text-decoration: inherit;
@@ -433,8 +421,7 @@ header .buttons {
   visibility: visible;
 }
 .buttons a:before {
-  visibility: hidden; 
-  /* color: #bbb; */
+  visibility: hidden;
   font-size: 7vmin;
   line-height: 13vmin;
 }
@@ -444,11 +431,7 @@ header .buttons {
  min-height: 20vmin;
  display: block;
 }
-#divCards .cardsource.buttons a {
-  /*border-radius: 8vmin;
-  box-shadow: none;*/
-  color: #FFF; 
-}
+#divCards .cardsource.buttons a { color: #FFF; }
 #divCards .cardsource.buttons a.el-icon-folder-open {
   background-color: #FFE000;
   padding: 0 2.6vmin 0 3.4vmin;
@@ -457,19 +440,20 @@ header .buttons {
 #divCards .cardsource.buttons a.el-icon-folder-open:before, #divCards .cardsource.buttons a.el-icon-magic:before {
    color:#fff;
 }
-.cameracontent,
-video, canvas {
+.cameracontent, video, canvas {
   width: auto;
   height: 28vmin;
   display:none;
 }
-canvas,
-.cameracontent {
-position:absolute;
+.pt video {
+  width: 28vmin;
+  height: auto;
+}
+canvas, .cameracontent {
+  position:absolute;
   width: 28vmin;
   height: 28vmin;
-  
-overflow: hidden;
+  overflow: hidden;
   z-index:99;
 }
 .cameracontent a {
@@ -527,13 +511,13 @@ overflow: hidden;
   display:block;
 }
 #help .placeholders .el-icon-remove-sign:before {
-background: transparent !important;
+  background: transparent !important;
   color: #db0000;
-font-size: 5vmin;
-line-height: 5vmin !important;
-position: absolute;
-top: 0;
-left: 0;
+  font-size: 5vmin;
+  line-height: 5vmin !important;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #help .reset.el-icon-repeat {
   background-color: #DB0000;
@@ -563,7 +547,6 @@ left: 0;
   -o-transition: box-shadow .5s ease;
   -webkit-transition: box-shadow .5s ease;
   transition: box-shadow .5s ease;
-  /* display: block; */
 }
 #help .card.outline.dragover {
   box-shadow: rgba(20,20,20,.3) 0 0 20px inset;
