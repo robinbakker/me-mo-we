@@ -298,7 +298,7 @@ var memowe = {
 
     switch (memowe.SourceType) {
       case memowe.ST_Flickr:
-        $.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?', {
+        $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?', {
           tags: memowe.Keyword,
           tagmode: 'any',
           format: 'json'
@@ -383,7 +383,7 @@ var memowe = {
   },
   getImagesFromMagic: function () {
     memowe.setRandomKeyword();
-    $.getJSON('http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?', {
+    $.getJSON('https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?', {
       tags: memowe.Keyword,
       tagmode: 'any',
       format: 'json'
@@ -630,8 +630,6 @@ var memowe = {
             memowe.CardsLoaded++;
             if (memowe.CardsLoaded >= memowe.NrCards) memowe.startGame();
           }).attr('src', item.src));
-        } else {
-          //MCard.append($('<img/>').attr('src', 'img/transpix.png').addClass('filler'));
         }
       }
       MCard.append($('<img/>').attr('src', 'img/transpix.png').addClass('filler'));
